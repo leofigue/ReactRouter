@@ -26,23 +26,23 @@ const Contacto = () => {
         const newErrors = {};
     
         if (!formData.nombre.trim()) {
-          newErrors.nombre = "El nombre es obligatorio";
+          newErrors.nombre = "Ingrese su nombre";
         }
         if (!formData.apellido.trim()) {
-          newErrors.apellido = "El apellido es obligatorio";
+          newErrors.apellido = "Ingrese su apellido";
         }
         if (!formData.email.trim()) {
-          newErrors.email = "El correo electrónico es obligatorio";
+          newErrors.email = "Ingrese un email";
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-          newErrors.email = "Formato de correo electrónico no válido";
+          newErrors.email = "El email ingresado no es válido";
         }
         if (!formData.telefono.trim()) {
-          newErrors.telefono = "El teléfono es obligatorio";
+          newErrors.telefono = "Ingrese un teléfono";
         } else if (!/^\d+$/.test(formData.telefono)) {
-          newErrors.telefono = "Número de teléfono inválido";
+          newErrors.telefono = "El teléfono ingresado no es válido";
         }
         if (!formData.comentarios.trim()) {
-            newErrors.comentarios = "El comentario es obligatorio";
+            newErrors.comentarios = "Ingrese un comentario";
           }
         if (Object.keys(newErrors).length > 0) {
           setErrors(newErrors);
